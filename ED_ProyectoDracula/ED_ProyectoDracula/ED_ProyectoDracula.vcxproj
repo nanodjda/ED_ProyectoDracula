@@ -131,14 +131,19 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="MyForm1.cpp" />
     <ClCompile Include="VCortarMazo.cpp" />
     <ClCompile Include="VInicial.cpp" />
+    <ClCompile Include="Vprincipal.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VCortarMazo.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="VInicial.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Vprincipal.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
@@ -148,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VInicial.resx">
       <DependentUpon>VInicial.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vprincipal.resx">
+      <DependentUpon>Vprincipal.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
