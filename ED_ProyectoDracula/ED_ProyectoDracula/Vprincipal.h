@@ -35,6 +35,8 @@ namespace ED_ProyectoDracula {
 			}
 		}
 	private: System::Windows::Forms::Button^  bVerCartas1;
+	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::Button^  button2;
 	protected:
 
 	protected:
@@ -55,6 +57,8 @@ namespace ED_ProyectoDracula {
 		{
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Vprincipal::typeid));
 			this->bVerCartas1 = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// bVerCartas1
@@ -72,12 +76,43 @@ namespace ED_ProyectoDracula {
 			this->bVerCartas1->UseVisualStyleBackColor = false;
 			this->bVerCartas1->Click += gcnew System::EventHandler(this, &Vprincipal::button1_Click);
 			// 
+			// button1
+			// 
+			this->button1->BackColor = System::Drawing::Color::Transparent;
+			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
+			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->button1->FlatAppearance->BorderSize = 0;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button1->Location = System::Drawing::Point(361, 522);
+			this->button1->Margin = System::Windows::Forms::Padding(0);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(168, 66);
+			this->button1->TabIndex = 1;
+			this->button1->UseVisualStyleBackColor = false;
+			// 
+			// button2
+			// 
+			this->button2->BackColor = System::Drawing::Color::Transparent;
+			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
+			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->button2->FlatAppearance->BorderSize = 0;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button2->Location = System::Drawing::Point(639, 542);
+			this->button2->Margin = System::Windows::Forms::Padding(0);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(168, 66);
+			this->button2->TabIndex = 2;
+			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &Vprincipal::button2_Click);
+			// 
 			// Vprincipal
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(799, 605);
+			this->ClientSize = System::Drawing::Size(797, 605);
+			this->Controls->Add(this->button2);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->bVerCartas1);
 			this->Name = L"Vprincipal";
 			this->Text = L"Vprincipal";
@@ -87,5 +122,7 @@ namespace ED_ProyectoDracula {
 #pragma endregion
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
-	};
+	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+	}
+};
 }
