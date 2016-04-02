@@ -1,5 +1,7 @@
 #pragma once
 #include "Vprincipal.h"
+#include "Deck.h"
+#include "Carta.h"
 
 namespace ED_ProyectoDracula {
 
@@ -22,6 +24,9 @@ namespace ED_ProyectoDracula {
 			//
 			//TODO: agregar código de constructor aquí
 			//
+
+			Deck nDeck = new Deck();
+
 		}
 
 	protected:
@@ -36,6 +41,9 @@ namespace ED_ProyectoDracula {
 			}
 		}
 	private: System::Windows::Forms::Button^  bSeguir;
+	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::Button^  button2;
+	private: System::Windows::Forms::Button^  button3;
 	protected:
 
 	private:
@@ -53,6 +61,9 @@ namespace ED_ProyectoDracula {
 		{
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(VCortarMazo::typeid));
 			this->bSeguir = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// bSeguir
@@ -70,6 +81,40 @@ namespace ED_ProyectoDracula {
 			this->bSeguir->UseVisualStyleBackColor = false;
 			this->bSeguir->Click += gcnew System::EventHandler(this, &VCortarMazo::bSeguir_Click);
 			// 
+			// button1
+			// 
+			this->button1->BackColor = System::Drawing::Color::Transparent;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button1->Location = System::Drawing::Point(26, 128);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(83, 107);
+			this->button1->TabIndex = 2;
+			this->button1->Text = L"button1";
+			this->button1->UseVisualStyleBackColor = false;
+			// 
+			// button2
+			// 
+			this->button2->BackColor = System::Drawing::Color::Transparent;
+			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button2->Location = System::Drawing::Point(355, 128);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(83, 107);
+			this->button2->TabIndex = 3;
+			this->button2->Text = L"button2";
+			this->button2->UseVisualStyleBackColor = false;
+			// 
+			// button3
+			// 
+			this->button3->BackColor = System::Drawing::Color::Transparent;
+			this->button3->FlatAppearance->BorderSize = 0;
+			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button3->Location = System::Drawing::Point(176, 91);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(116, 181);
+			this->button3->TabIndex = 4;
+			this->button3->UseVisualStyleBackColor = false;
+			this->button3->Click += gcnew System::EventHandler(this, &VCortarMazo::button3_Click);
+			// 
 			// VCortarMazo
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -77,8 +122,11 @@ namespace ED_ProyectoDracula {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(459, 338);
+			this->Controls->Add(this->button3);
+			this->Controls->Add(this->button2);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->bSeguir);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"VCortarMazo";
 			this->Text = L"VCortarMazo";
 			this->Load += gcnew System::EventHandler(this, &VCortarMazo::VCortarMazo_Load);
@@ -93,5 +141,8 @@ namespace ED_ProyectoDracula {
 		vP->Show();
 		this->Close();
 	}
-	};
+	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
+
+	}
+};
 }

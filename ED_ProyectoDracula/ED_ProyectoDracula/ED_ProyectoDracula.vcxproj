@@ -138,6 +138,9 @@
     <ClCompile Include="Vprincipal.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Carta.h" />
+    <ClInclude Include="Deck.h" />
+    <ClInclude Include="Stack.h" />
     <ClInclude Include="VCartasJugador.h">
       <FileType>CppForm</FileType>
     </ClInclude>

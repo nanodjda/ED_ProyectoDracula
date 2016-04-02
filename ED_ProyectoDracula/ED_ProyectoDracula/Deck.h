@@ -6,17 +6,16 @@
 
 using namespace std;
 
-const int Cartas_por_deck = 52;
-int posicion;
-bool ya;
-
 class Deck{
 
 private:
     Carta* deck;
-
+	const int Cartas_por_deck = 52;
+	int posicion;
+	bool ya;
 
 public:
+
     Deck(){
         ya = false;
         string caras[] = {"As","Dos","Tres","Cuatro","Cinco","Seis","Siete","Ocho","Nueve","Diez",
@@ -60,8 +59,6 @@ public:
             for (int j = 0; j < pos; j++){
                 pila.push(deck[j]);
             }
-
-
 
             for (int k = 0; k < 54; k++){
                 deck[k] = pila.pop();
