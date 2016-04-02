@@ -68,7 +68,7 @@ namespace ED_ProyectoDracula {
 			this->bVerCartas1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->bVerCartas1->FlatAppearance->BorderSize = 0;
 			this->bVerCartas1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->bVerCartas1->Location = System::Drawing::Point(361, 15);
+			this->bVerCartas1->Location = System::Drawing::Point(401, 18);
 			this->bVerCartas1->Margin = System::Windows::Forms::Padding(0);
 			this->bVerCartas1->Name = L"bVerCartas1";
 			this->bVerCartas1->Size = System::Drawing::Size(168, 66);
@@ -83,7 +83,7 @@ namespace ED_ProyectoDracula {
 			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->button1->FlatAppearance->BorderSize = 0;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->Location = System::Drawing::Point(361, 522);
+			this->button1->Location = System::Drawing::Point(401, 573);
 			this->button1->Margin = System::Windows::Forms::Padding(0);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(168, 66);
@@ -97,7 +97,7 @@ namespace ED_ProyectoDracula {
 			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->button2->FlatAppearance->BorderSize = 0;
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button2->Location = System::Drawing::Point(639, 542);
+			this->button2->Location = System::Drawing::Point(735, 583);
 			this->button2->Margin = System::Windows::Forms::Padding(0);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(168, 66);
@@ -110,7 +110,8 @@ namespace ED_ProyectoDracula {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(797, 605);
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(885, 648);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->bVerCartas1);

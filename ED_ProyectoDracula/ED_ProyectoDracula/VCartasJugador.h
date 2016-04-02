@@ -56,7 +56,8 @@ namespace ED_ProyectoDracula {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(399, 313);
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(446, 349);
 			this->Name = L"VCartasJugador";
 			this->Text = L"VCartasJugador";
 			this->ResumeLayout(false);
