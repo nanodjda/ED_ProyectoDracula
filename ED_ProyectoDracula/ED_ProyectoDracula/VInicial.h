@@ -1,5 +1,7 @@
 #pragma once
 
+#include "VCortarMazo.h"
+
 namespace ED_ProyectoDracula {
 
 	using namespace System;
@@ -34,7 +36,9 @@ namespace ED_ProyectoDracula {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::Button^  bInicial;
+	protected:
+
 	protected:
 
 	private:
@@ -51,33 +55,32 @@ namespace ED_ProyectoDracula {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(VInicial::typeid));
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->bInicial = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
-			// button1
+			// bInicial
 			// 
-			this->button1->BackColor = System::Drawing::Color::Transparent;
-			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
-			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->button1->FlatAppearance->BorderSize = 0;
-			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->Location = System::Drawing::Point(423, 602);
-			this->button1->Margin = System::Windows::Forms::Padding(0);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(200, 79);
-			this->button1->TabIndex = 0;
-			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &VInicial::button1_Click);
+			this->bInicial->BackColor = System::Drawing::Color::Transparent;
+			this->bInicial->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bInicial.BackgroundImage")));
+			this->bInicial->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->bInicial->FlatAppearance->BorderSize = 0;
+			this->bInicial->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bInicial->Location = System::Drawing::Point(317, 489);
+			this->bInicial->Margin = System::Windows::Forms::Padding(0);
+			this->bInicial->Name = L"bInicial";
+			this->bInicial->Size = System::Drawing::Size(150, 64);
+			this->bInicial->TabIndex = 0;
+			this->bInicial->UseVisualStyleBackColor = false;
+			this->bInicial->Click += gcnew System::EventHandler(this, &VInicial::button1_Click);
 			// 
 			// VInicial
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(1045, 692);
-			this->Controls->Add(this->button1);
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->ClientSize = System::Drawing::Size(784, 562);
+			this->Controls->Add(this->bInicial);
 			this->Name = L"VInicial";
 			this->Text = L"VInicial";
 			this->Load += gcnew System::EventHandler(this, &VInicial::VInicial_Load);
@@ -86,7 +89,11 @@ namespace ED_ProyectoDracula {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+		VCortarMazo^ cM = gcnew VCortarMazo();
+		cM->Show();
+		this->Hide();
 	}
+
 	private: System::Void VInicial_Load(System::Object^  sender, System::EventArgs^  e) {
 	}
 	};
