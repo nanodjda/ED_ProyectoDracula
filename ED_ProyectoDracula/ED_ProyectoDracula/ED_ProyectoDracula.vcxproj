@@ -130,8 +130,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MyForm.cpp" />
-    <ClCompile Include="MyForm1.cpp" />
     <ClCompile Include="VCartasJugador.cpp" />
     <ClCompile Include="VCortarMazo.cpp" />
     <ClCompile Include="VGanador.cpp" />
