@@ -130,14 +130,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="VCortarMazo.cpp" />
     <ClCompile Include="VInicial.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="VCortarMazo.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="VInicial.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="VCortarMazo.resx">
+      <DependentUpon>VCortarMazo.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VInicial.resx">
       <DependentUpon>VInicial.h</DependentUpon>
     </EmbeddedResource>

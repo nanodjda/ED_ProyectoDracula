@@ -61,28 +61,33 @@ namespace ED_ProyectoDracula {
 			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button1->FlatAppearance->BorderSize = 0;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->Location = System::Drawing::Point(317, 489);
+			this->button1->Location = System::Drawing::Point(423, 602);
 			this->button1->Margin = System::Windows::Forms::Padding(0);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(150, 64);
+			this->button1->Size = System::Drawing::Size(200, 79);
 			this->button1->TabIndex = 0;
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &VInicial::button1_Click);
 			// 
 			// VInicial
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(784, 562);
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(1045, 692);
 			this->Controls->Add(this->button1);
+			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"VInicial";
 			this->Text = L"VInicial";
+			this->Load += gcnew System::EventHandler(this, &VInicial::VInicial_Load);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+	}
+	private: System::Void VInicial_Load(System::Object^  sender, System::EventArgs^  e) {
 	}
 	};
 }
