@@ -2,9 +2,10 @@
 #include "VCartasJugador.h"
 #include "VCortarMazo.h"
 #include "VGanador.h"
-#include "Vprincipal.h"
+#include "Vprincipal.h"z
 
 using namespace System;
+using namespace std;
 using namespace System::Windows::Forms;
 
 [STAThread]

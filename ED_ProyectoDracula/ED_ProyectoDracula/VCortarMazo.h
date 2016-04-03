@@ -1,7 +1,6 @@
 #pragma once
 #include "Vprincipal.h"
 #include "Deck.h"
-#include "Carta.h"
 
 namespace ED_ProyectoDracula {
 
@@ -15,6 +14,7 @@ namespace ED_ProyectoDracula {
 	/// <summary>
 	/// Resumen de VCortarMazo
 	/// </summary>
+
 	public ref class VCortarMazo : public System::Windows::Forms::Form
 	{
 	public:
@@ -24,8 +24,6 @@ namespace ED_ProyectoDracula {
 			//
 			//TODO: agregar código de constructor aquí
 			//
-
-			Deck nDeck = new Deck();
 
 		}
 
@@ -142,7 +140,6 @@ namespace ED_ProyectoDracula {
 		this->Close();
 	}
 	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
-
 	}
 };
 }

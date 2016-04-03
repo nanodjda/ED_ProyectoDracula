@@ -4,9 +4,9 @@
 #include "Stack.h"
 #include <iomanip>
 
-using namespace std;
+using namespace System;
 
-class Deck{
+public ref class Deck{
 
 private:
     Carta* deck;
