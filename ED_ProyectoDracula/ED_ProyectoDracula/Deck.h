@@ -2,7 +2,6 @@
 #include <ctime>
 #include <iomanip>
 #include "Carta.h"
-#include "AStack.h"
 
 #define ARRAY_SIZE 54
 
@@ -54,32 +53,34 @@ public:
 	}
 
 	
-	void cortar(int pos) {
+	/*void cortar(int pos) {
 		if (pos != 0 && pos != 53) {
-			AStack^ pila;
+			AStack<Carta^> pila;
 
 			for (int i = pos; i < 54; i++) {
-				pila->push(deck[i]);
+				pila.push(deck[i]);
 			}
 
 			for (int j = 0; j < pos; j++) {
-				pila->push(deck[j]);
+				pila.push(deck[j]);
 			}
 
 			for (int k = 0; k < 54; k++) {
-				deck[k] = pila->pop();
+				deck[k] = pila.pop();
 			}
 		}
 	}
 
-	Carta^ seleccionar(int pos) {
-		if (pos > 53 || pos < 0) {
-			Console::WriteLine("Indice invalido");
-		} else if (ya == true && pos == posicion) {
-			Console::WriteLine("Carta ya seleccionada");
-		}
-		ya = true;
-		posicion = pos;
-		return deck[pos];
+	/*
+	Carta seleccionar(int pos)throw(runtime_error) {
+	if (pos > 53 || pos < 0) {
+	throw runtime_error("Indice invalido");
 	}
+	else if (ya == true && pos == posicion) {
+	throw runtime_error("Carta ya seleccionada");
+	}
+	ya = true;
+	posicion = pos;
+	return deck[pos];
+	}*/
 };

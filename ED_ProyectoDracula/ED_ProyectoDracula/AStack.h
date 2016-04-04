@@ -1,18 +1,23 @@
 #pragma once
 
-#include "Carta.h"
 #define defaultSize 2048
+#include <stdexcept>
+#include "Carta.h"
 
-using namespace System;
+generic<class E>
 
 ref class AStack
 {
 private:
-	int maxSize;
+	int^ maxSize;
 	int top;
 	array< Carta^ >^ ListArray; //puntero a arreglo
+	E prueba;
+
 
 public:
+	AStack();
+	AStack(E item) : prueba(item) {}
 	AStack(int size) {
 		maxSize = size;
 		top = 0;
@@ -45,7 +50,7 @@ public:
 	}
 
 	int length() {
-		return top; //largo de pila
+		return top; //larog de pila
 	}
 };
 

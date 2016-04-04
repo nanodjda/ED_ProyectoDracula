@@ -88,28 +88,28 @@ namespace ED_ProyectoDracula {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(83, 107);
 			this->button1->TabIndex = 2;
+			this->button1->Text = L"button1";
 			this->button1->UseVisualStyleBackColor = false;
 			// 
 			// button2
 			// 
 			this->button2->BackColor = System::Drawing::Color::Transparent;
-			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button2->Location = System::Drawing::Point(355, 128);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(83, 107);
 			this->button2->TabIndex = 3;
+			this->button2->Text = L"button2";
 			this->button2->UseVisualStyleBackColor = false;
 			// 
 			// button3
 			// 
 			this->button3->BackColor = System::Drawing::Color::Transparent;
-			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button3->FlatAppearance->BorderSize = 0;
 			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button3->Location = System::Drawing::Point(166, 82);
+			this->button3->Location = System::Drawing::Point(176, 91);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(137, 186);
+			this->button3->Size = System::Drawing::Size(116, 181);
 			this->button3->TabIndex = 4;
 			this->button3->UseVisualStyleBackColor = false;
 			this->button3->Click += gcnew System::EventHandler(this, &VCortarMazo::button3_Click);
@@ -142,11 +142,9 @@ namespace ED_ProyectoDracula {
 	}
 	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 		Deck^ mazo = gcnew Deck();
-		mazo->mezclar();
 		mazo->mostrar();
 		System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(VCortarMazo::typeid));
-		this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(mazo->seleccionar(0)->getDireccion())));
-		this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(mazo->seleccionar(1)->getDireccion())));
+		this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"JackDiamante")));
 	}
 };
 }
