@@ -134,9 +134,6 @@ namespace ED_ProyectoDracula {
 		}
 #pragma endregion
 	private: System::Void VCortarMazo_Load(System::Object^  sender, System::EventArgs^  e) {
-		Deck^ nuevo = gcnew Deck();
-		System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(VCortarMazo::typeid));
-		this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"ace_of_spades")));
 	}
 	private: System::Void bSeguir_Click(System::Object^  sender, System::EventArgs^  e) {
 		Vprincipal^ vP = gcnew Vprincipal();
@@ -144,6 +141,10 @@ namespace ED_ProyectoDracula {
 		this->Close();
 	}
 	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
+		Deck^ mazo = gcnew Deck();
+		mazo->mostrar();
+		System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(VCortarMazo::typeid));
+		this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"JackDiamante")));
 	}
 };
 }

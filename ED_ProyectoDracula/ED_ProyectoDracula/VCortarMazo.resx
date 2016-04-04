@@ -164,7 +164,7 @@
         u53UPuXbp9Z8Tg+q/INS201P2wmQ5vQ0vAzfHe0uQASIPODwwL8lQlx73vA/vgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="ace_of_spades" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="AsCorazon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAALWCAYAAACwWmEqAAAABHNCSVQICAgIfAhkiAAAAAFzUkdCAK7O
         HOkAAAAEZ0FNQQAAsY8L/GEFAAAACXBIWXMAACEgAAAhIAEoCCnPAAAAGXRFWHRTb2Z0d2FyZQB3d3cu
@@ -6064,5 +6064,9 @@
         zN4wurnVGcClTJbcbEvxm8m6ouflouX+Y9pye/PbPKPsKic/BcdnSDifGLr/DxDdn5xNp9reAAAAAElF
         TkSuQmCC
 </value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="JackDiamante" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\JackDiamante.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

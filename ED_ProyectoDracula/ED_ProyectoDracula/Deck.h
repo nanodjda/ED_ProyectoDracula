@@ -1,9 +1,9 @@
 #include <cstdlib>
 #include <ctime>
-#include "Carta.h"
 #include <iomanip>
+#include "Carta.h"
+
 #define ARRAY_SIZE 54
-#pragma once
 
 using namespace System;
 
@@ -45,29 +45,33 @@ public:
 			Carta^ temp = deck[primero];
 			deck[primero] = deck[segundo];
 			deck[segundo] = temp;
-			Console::WriteLine(deck[segundo]->print());
+		}
+	}
+
+	Carta^ topCarta() {
+		return deck[0];
+	}
+
+	
+	/*void cortar(int pos) {
+		if (pos != 0 && pos != 53) {
+			AStack<Carta^> pila;
+
+			for (int i = pos; i < 54; i++) {
+				pila.push(deck[i]);
+			}
+
+			for (int j = 0; j < pos; j++) {
+				pila.push(deck[j]);
+			}
+
+			for (int k = 0; k < 54; k++) {
+				deck[k] = pila.pop();
+			}
 		}
 	}
 
 	/*
-	void cortar(int pos) {
-	if (pos != 0 && pos != 53) {
-	AStack<Carta> pila;
-
-	for (int i = pos; i < 54; i++) {
-	pila.push(deck[i]);
-	}
-
-	for (int j = 0; j < pos; j++) {
-	pila.push(deck[j]);
-	}
-
-	for (int k = 0; k < 54; k++) {
-	deck[k] = pila.pop();
-	}
-	}
-	}
-
 	Carta seleccionar(int pos)throw(runtime_error) {
 	if (pos > 53 || pos < 0) {
 	throw runtime_error("Indice invalido");
