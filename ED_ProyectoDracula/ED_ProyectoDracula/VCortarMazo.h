@@ -82,6 +82,7 @@ namespace ED_ProyectoDracula {
 			// button1
 			// 
 			this->button1->BackColor = System::Drawing::Color::Transparent;
+			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button1->Location = System::Drawing::Point(26, 128);
 			this->button1->Name = L"button1";
@@ -133,6 +134,9 @@ namespace ED_ProyectoDracula {
 		}
 #pragma endregion
 	private: System::Void VCortarMazo_Load(System::Object^  sender, System::EventArgs^  e) {
+		Deck^ nuevo = gcnew Deck();
+		System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(VCortarMazo::typeid));
+		this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"ace_of_spades")));
 	}
 	private: System::Void bSeguir_Click(System::Object^  sender, System::EventArgs^  e) {
 		Vprincipal^ vP = gcnew Vprincipal();

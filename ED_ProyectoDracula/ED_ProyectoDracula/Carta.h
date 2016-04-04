@@ -1,36 +1,22 @@
 #pragma once
+
+using namespace System;
+
 ref class Carta
 {
-public:
-	Carta();
-};
-
-
-#include <string>
-#include <iostream>
-
-using namespace std;
-
-class Carta {
 
 private:
-	string cara; //valor
-	string palo; //simbolo
+	String^ cara;
+	String^ palo;
 
 public:
-	//constructor
-	Carta(string pCara, string pPalo) {
+	Carta();
+	Carta(String^ pCara, String^ pPalo) {
 		cara = pCara;
 		palo = pPalo;
 	}
 
-	Carta() {
-	}
-
-
-	//print
-	string print() {
+	String^ print() {
 		return (cara + " de " + palo);
 	}
-
 };

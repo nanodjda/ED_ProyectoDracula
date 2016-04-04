@@ -2,14 +2,14 @@
 #include "VCartasJugador.h"
 #include "VCortarMazo.h"
 #include "VGanador.h"
-#include "Vprincipal.h"z
+#include "Vprincipal.h"
 
 using namespace System;
-using namespace std;
 using namespace System::Windows::Forms;
 
 [STAThread]
 int main(array<String^>^ args) {
+
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
