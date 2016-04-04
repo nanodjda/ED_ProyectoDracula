@@ -11,7 +11,6 @@ private:
 	String^ direccion;
 
 public:
-	Carta();
 	Carta(String^ pCara, String^ pPalo) {
 		cara = pCara;
 		palo = pPalo;
