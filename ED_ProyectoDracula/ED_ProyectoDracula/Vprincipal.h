@@ -89,6 +89,7 @@ namespace ED_ProyectoDracula {
 			this->button1->Size = System::Drawing::Size(126, 54);
 			this->button1->TabIndex = 1;
 			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &Vprincipal::button1_Click_1);
 			// 
 			// button2
 			// 
@@ -115,23 +116,30 @@ namespace ED_ProyectoDracula {
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->bVerCartas1);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"Vprincipal";
 			this->Text = L"Vprincipal";
 			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &Vprincipal::Vprincipal_FormClosing);
+			this->Load += gcnew System::EventHandler(this, &Vprincipal::Vprincipal_Load);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
+
 	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+	
 	}
 
 private: System::Void Vprincipal_FormClosing(System::Object^  sender, System::Windows::Forms::FormClosingEventArgs^  e) {
 
 	Application::Exit();
 
+}
+private: System::Void Vprincipal_Load(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void button1_Click_1(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }

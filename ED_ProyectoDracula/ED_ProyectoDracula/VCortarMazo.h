@@ -42,6 +42,7 @@ namespace ED_ProyectoDracula {
 	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::Button^  button2;
 	private: System::Windows::Forms::Button^  button3;
+
 	protected:
 
 	private:
@@ -107,7 +108,7 @@ namespace ED_ProyectoDracula {
 			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button3->FlatAppearance->BorderSize = 0;
 			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button3->Location = System::Drawing::Point(166, 82);
+			this->button3->Location = System::Drawing::Point(165, 78);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(137, 186);
 			this->button3->TabIndex = 4;
@@ -147,6 +148,7 @@ namespace ED_ProyectoDracula {
 		System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(VCortarMazo::typeid));
 		this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(mazo->seleccionar(0)->getDireccion())));
 		this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(mazo->seleccionar(1)->getDireccion())));
+		this->button3->Enabled = false;
 	}
 };
 }

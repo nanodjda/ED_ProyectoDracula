@@ -1,3 +1,6 @@
+#ifndef DECK_H
+#define DECK_H
+
 #include <cstdlib>
 #include <ctime>
 #include <iomanip>
@@ -7,7 +10,6 @@
 #define ARRAY_SIZE 54
 
 using namespace System;
-
 ref class Deck
 {
 private:
@@ -22,9 +24,14 @@ public:
 			"Jack","Dama","Rey" };
 
 		array<String^>^ palos = { "Corazon","Diamante","Espada","Trebol" };
-
 		for (int i = 0; i < ARRAY_SIZE - 2; i++) {
 			deck[i] = gcnew Carta(caras[i % 13], palos[i / 13]);
+			if (deck[i]->getPalo() == "Diamante" || deck[i]->getPalo() == "Corazon") {
+				deck[i]->setColor("Rojo");
+			}
+			else {
+				deck[i]->setColor("Negro");
+			}
 		}
 		deck[52] = gcnew Carta("Joker", "Negro");
 		deck[53] = gcnew Carta("Joker", "Rojo");
@@ -83,3 +90,5 @@ public:
 		return deck[pos];
 	}
 };
+
+#endif
