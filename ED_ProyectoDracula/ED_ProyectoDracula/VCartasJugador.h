@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Deck.h"
+#include "Tablero.h"
 
 namespace ED_ProyectoDracula {
 
@@ -16,9 +17,12 @@ namespace ED_ProyectoDracula {
 	/// </summary>
 	public ref class VCartasJugador : public System::Windows::Forms::Form
 	{
+	private:
+		int jugador;
 	public:
-		VCartasJugador(void)
+		VCartasJugador(int pJugador)
 		{
+			jugador = pJugador;
 			InitializeComponent();
 			//
 			//TODO: agregar código de constructor aquí
@@ -131,12 +135,23 @@ namespace ED_ProyectoDracula {
 		}
 #pragma endregion
 	private: System::Void VCartasJugador_Load(System::Object^  sender, System::EventArgs^  e) {
-		Deck^ mazo = Deck::Instance;
+		Tablero^ tJuego = Tablero::Instance;
+		
 		System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(VCartasJugador::typeid));
-		this->Campo1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(mazo->seleccionar(0)->getDireccion())));
-		this->Campo2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(mazo->seleccionar(1)->getDireccion())));
-		this->Campo3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(mazo->seleccionar(2)->getDireccion())));
-		this->Campo4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(mazo->seleccionar(3)->getDireccion())));
+		
+		if (jugador == 1) {
+			this->Campo1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ1()[0]->getDireccion())));
+			this->Campo2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ1()[1]->getDireccion())));
+			this->Campo3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ1()[2]->getDireccion())));
+			this->Campo4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ1()[3]->getDireccion())));
+		}
+		else {
+			this->Campo1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ2()[0]->getDireccion())));
+			this->Campo2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ2()[1]->getDireccion())));
+			this->Campo3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ2()[2]->getDireccion())));
+			this->Campo4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ2()[3]->getDireccion())));
+		}
+
 	}
 	private: System::Void Campo2_Click(System::Object^  sender, System::EventArgs^  e) {
 	}

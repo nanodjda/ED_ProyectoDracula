@@ -3,6 +3,7 @@
 #include "VCartasJugador.h"
 #include "VDireccion.h"
 #include "Tablero.h"
+#include "Deck.h"
 
 namespace ED_ProyectoDracula {
 
@@ -105,21 +106,26 @@ namespace ED_ProyectoDracula {
 		}
 	#pragma endregion
 		private: System::Void bVer1_Click(System::Object^  sender, System::EventArgs^  e) {
-			VCartasJugador^ vCJ1 = gcnew VCartasJugador();
+			VCartasJugador^ vCJ1 = gcnew VCartasJugador(1);
 			vCJ1->Show();
 		}
 
 		private: System::Void bVer2_Click(System::Object^  sender, System::EventArgs^  e) {
-			VCartasJugador^ vCJ2 = gcnew VCartasJugador();
+			VCartasJugador^ vCJ2 = gcnew VCartasJugador(2);
 			vCJ2->Show();
 		}
 
 		private: System::Void Vprincipal_Load(System::Object^  sender, System::EventArgs^  e) {
 
+			Deck^ mazo = Deck::Instance;
+			mazo->mezclar();
 			VDireccion^ vDir = gcnew VDireccion();
 			vDir->ShowDialog();
 
 			Tablero^ tJuego = Tablero::Instance;
+
+			tJuego->repartir();
+
 			int ronda = 1;
 			Console::WriteLine(tJuego->getJActual());
 			Console::WriteLine(tJuego->getpDir1());

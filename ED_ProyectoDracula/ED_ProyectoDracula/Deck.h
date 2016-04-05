@@ -15,6 +15,7 @@ ref class Deck
 private:
 	array< Carta^ >^ deck = gcnew array< Carta^ >(ARRAY_SIZE);
 	int posicion;
+	int contador;
 	bool ya;
 	static Deck^ m_instance = gcnew Deck();
 
@@ -55,10 +56,11 @@ public:
 			deck[primero] = deck[segundo];
 			deck[segundo] = temp;
 		}
+		contador = 0;
 	}
 
 	Carta^ topCarta() {
-		return deck[0];
+		return deck[contador++];
 	}
 
 	void cortar(int pos) {

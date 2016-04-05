@@ -1,5 +1,6 @@
 #pragma once
 #include "Carta.h"
+#include "Deck.h"
 
 ref class Tablero
 {
@@ -14,6 +15,24 @@ private:
 
 public:
 	Tablero() {
+	}
+
+	void repartir() {
+		Deck^ mazo = Deck::Instance;
+		for (int i = 0; i < 4; i++) {
+			player1[i] = mazo->topCarta();
+		}
+		for (int i = 0; i < 4; i++) {
+			player2[i] = mazo->topCarta();
+		}
+	}
+
+	array< Carta^ >^ getCartasJ1() {
+		return player1;
+	}
+
+	array< Carta^ >^ getCartasJ2() {
+		return player2;
 	}
 
 	void setpDir1(int pP) {
