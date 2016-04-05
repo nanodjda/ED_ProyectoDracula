@@ -2,6 +2,7 @@
 #include "Vprincipal.h"
 #include "Deck.h"
 
+
 namespace ED_ProyectoDracula {
 
 	using namespace System;
@@ -142,7 +143,7 @@ namespace ED_ProyectoDracula {
 		this->Close();
 	}
 	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
-		Deck^ mazo = gcnew Deck();
+		Deck^ mazo = Deck::Instance;
 		mazo->mezclar();
 		mazo->mostrar();
 		System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(VCortarMazo::typeid));

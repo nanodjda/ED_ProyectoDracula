@@ -1,5 +1,7 @@
 #pragma once
 
+#include "VCartasJugador.h"
+
 namespace ED_ProyectoDracula {
 
 	using namespace System;
@@ -34,14 +36,9 @@ namespace ED_ProyectoDracula {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^  bVerCartas1;
-	private: System::Windows::Forms::Button^  button1;
-	private: System::Windows::Forms::Button^  button2;
+	private: System::Windows::Forms::Button^  bVer1;
 	protected:
-
-	protected:
-
-
+	private: System::Windows::Forms::Button^  bVer2;
 	private:
 		/// <summary>
 		/// Variable del diseñador necesaria.
@@ -56,55 +53,37 @@ namespace ED_ProyectoDracula {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Vprincipal::typeid));
-			this->bVerCartas1 = (gcnew System::Windows::Forms::Button());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->bVer1 = (gcnew System::Windows::Forms::Button());
+			this->bVer2 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
-			// bVerCartas1
+			// bVer1
 			// 
-			this->bVerCartas1->BackColor = System::Drawing::Color::Transparent;
-			this->bVerCartas1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bVerCartas1.BackgroundImage")));
-			this->bVerCartas1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->bVerCartas1->FlatAppearance->BorderSize = 0;
-			this->bVerCartas1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->bVerCartas1->Location = System::Drawing::Point(301, 15);
-			this->bVerCartas1->Margin = System::Windows::Forms::Padding(0);
-			this->bVerCartas1->Name = L"bVerCartas1";
-			this->bVerCartas1->Size = System::Drawing::Size(126, 54);
-			this->bVerCartas1->TabIndex = 0;
-			this->bVerCartas1->UseVisualStyleBackColor = false;
-			this->bVerCartas1->Click += gcnew System::EventHandler(this, &Vprincipal::button1_Click);
+			this->bVer1->BackColor = System::Drawing::Color::Transparent;
+			this->bVer1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bVer1.BackgroundImage")));
+			this->bVer1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->bVer1->FlatAppearance->BorderSize = 0;
+			this->bVer1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bVer1->Location = System::Drawing::Point(354, 18);
+			this->bVer1->Name = L"bVer1";
+			this->bVer1->Size = System::Drawing::Size(142, 57);
+			this->bVer1->TabIndex = 0;
+			this->bVer1->UseVisualStyleBackColor = false;
+			this->bVer1->Click += gcnew System::EventHandler(this, &Vprincipal::bVer1_Click);
 			// 
-			// button1
+			// bVer2
 			// 
-			this->button1->BackColor = System::Drawing::Color::Transparent;
-			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
-			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button1->FlatAppearance->BorderSize = 0;
-			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->Location = System::Drawing::Point(301, 466);
-			this->button1->Margin = System::Windows::Forms::Padding(0);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(126, 54);
-			this->button1->TabIndex = 1;
-			this->button1->UseVisualStyleBackColor = false;
-			this->button1->Click += gcnew System::EventHandler(this, &Vprincipal::button1_Click_1);
-			// 
-			// button2
-			// 
-			this->button2->BackColor = System::Drawing::Color::Transparent;
-			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
-			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button2->FlatAppearance->BorderSize = 0;
-			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button2->Location = System::Drawing::Point(551, 474);
-			this->button2->Margin = System::Windows::Forms::Padding(0);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(126, 54);
-			this->button2->TabIndex = 2;
-			this->button2->UseVisualStyleBackColor = false;
-			this->button2->Click += gcnew System::EventHandler(this, &Vprincipal::button2_Click);
+			this->bVer2->BackColor = System::Drawing::Color::Transparent;
+			this->bVer2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bVer2.BackgroundImage")));
+			this->bVer2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->bVer2->FlatAppearance->BorderSize = 0;
+			this->bVer2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bVer2->Location = System::Drawing::Point(354, 493);
+			this->bVer2->Name = L"bVer2";
+			this->bVer2->Size = System::Drawing::Size(142, 57);
+			this->bVer2->TabIndex = 1;
+			this->bVer2->UseVisualStyleBackColor = false;
+			this->bVer2->Click += gcnew System::EventHandler(this, &Vprincipal::bVer2_Click);
 			// 
 			// Vprincipal
 			// 
@@ -112,11 +91,9 @@ namespace ED_ProyectoDracula {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(664, 526);
-			this->Controls->Add(this->button2);
-			this->Controls->Add(this->button1);
-			this->Controls->Add(this->bVerCartas1);
-			this->Margin = System::Windows::Forms::Padding(2);
+			this->ClientSize = System::Drawing::Size(784, 562);
+			this->Controls->Add(this->bVer2);
+			this->Controls->Add(this->bVer1);
 			this->Name = L"Vprincipal";
 			this->Text = L"Vprincipal";
 			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &Vprincipal::Vprincipal_FormClosing);
@@ -125,21 +102,21 @@ namespace ED_ProyectoDracula {
 
 		}
 #pragma endregion
-	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+	private: System::Void bVer1_Click(System::Object^  sender, System::EventArgs^  e) {
+		VCartasJugador^ vCJ1 = gcnew VCartasJugador();
+		vCJ1->Show();
 	}
 
-	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
-	
+	private: System::Void bVer2_Click(System::Object^  sender, System::EventArgs^  e) {
+		VCartasJugador^ vCJ2 = gcnew VCartasJugador();
+		vCJ2->Show();
 	}
 
-private: System::Void Vprincipal_FormClosing(System::Object^  sender, System::Windows::Forms::FormClosingEventArgs^  e) {
 
-	Application::Exit();
-
-}
-private: System::Void Vprincipal_Load(System::Object^  sender, System::EventArgs^  e) {
-}
-private: System::Void button1_Click_1(System::Object^  sender, System::EventArgs^  e) {
-}
-};
+	private: System::Void Vprincipal_Load(System::Object^  sender, System::EventArgs^  e) {
+	}
+	private: System::Void Vprincipal_FormClosing(System::Object^  sender, System::Windows::Forms::FormClosingEventArgs^  e) {
+		Application::Exit();
+	}
+	};
 }

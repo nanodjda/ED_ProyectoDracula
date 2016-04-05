@@ -16,6 +16,7 @@ private:
 	array< Carta^ >^ deck = gcnew array< Carta^ >(ARRAY_SIZE);
 	int posicion;
 	bool ya;
+	static Deck^ m_instance = gcnew Deck();
 
 public:
 	Deck() {
@@ -89,6 +90,9 @@ public:
 		posicion = pos;
 		return deck[pos];
 	}
+
+	static property Deck^ Instance { Deck^ get() { return m_instance; } }
+
 };
 
 #endif

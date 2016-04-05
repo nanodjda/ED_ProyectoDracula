@@ -135,7 +135,6 @@
     <ClCompile Include="Carta.cpp" />
     <ClCompile Include="Deck.cpp" />
     <ClCompile Include="VCartasJugador.cpp" />
-    <ClCompile Include="VCortarMazo.cpp" />
     <ClCompile Include="VGanador.cpp" />
     <ClCompile Include="VInicial.cpp" />
     <ClCompile Include="Vprincipal.cpp" />
