@@ -1,6 +1,7 @@
 #pragma once
 #include "Vprincipal.h"
 #include "Deck.h"
+#include "Tablero.h"
 
 
 namespace ED_ProyectoDracula {
@@ -71,6 +72,7 @@ namespace ED_ProyectoDracula {
 			this->bSeguir->BackColor = System::Drawing::Color::Transparent;
 			this->bSeguir->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bSeguir.BackgroundImage")));
 			this->bSeguir->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->bSeguir->Enabled = false;
 			this->bSeguir->FlatAppearance->BorderSize = 0;
 			this->bSeguir->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->bSeguir->Location = System::Drawing::Point(176, 288);
@@ -144,12 +146,50 @@ namespace ED_ProyectoDracula {
 	}
 	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 		Deck^ mazo = Deck::Instance;
+		Boolean listo = true;
 		mazo->mezclar();
 		mazo->mostrar();
+
+		Tablero^ tJuego = Tablero::Instance;
+		if (mazo->seleccionar(0)->getColor() == "Rojo" && mazo->seleccionar(1)->getColor() == "Negro") {
+			tJuego->setJActual(1);
+		}
+		else if (mazo->seleccionar(0)->getColor() == "Negro" && mazo->seleccionar(1)->getColor() == "Rojo") {
+			tJuego->setJActual(2);
+		}
+		else if (mazo->seleccionar(0)->getColor() == mazo->seleccionar(1)->getColor()) {
+			if (mazo->seleccionar(0)->getColor() == "Rojo") {
+				if (mazo->seleccionar(0)->getPalo() == "Corazon" && mazo->seleccionar(1)->getPalo() == "Rombo") {
+					tJuego->setJActual(1);
+				}
+				else if(mazo->seleccionar(0)->getPalo() == "Rombo" && mazo->seleccionar(1)->getPalo() == "Corazon") {
+					tJuego->setJActual(2);
+				}
+				else if (mazo->seleccionar(0)->getPalo() == mazo->seleccionar(1)->getPalo()) {
+					if (mazo->seleccionar(0)->getValor() > mazo->seleccionar(1)->getValor()) {
+						tJuego->setJActual(1);
+					}
+					else {
+						tJuego->setJActual(2);
+					}
+				}
+			}
+			else {
+				listo = false;
+			}
+		}
+
 		System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(VCortarMazo::typeid));
 		this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(mazo->seleccionar(0)->getDireccion())));
 		this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(mazo->seleccionar(1)->getDireccion())));
-		this->button3->Enabled = false;
+
+		if (listo) {
+			this->button3->Enabled = false;
+			this->bSeguir->Enabled = true;
+		}
+		else {
+			listo = true;
+		}
 	}
 };
 }

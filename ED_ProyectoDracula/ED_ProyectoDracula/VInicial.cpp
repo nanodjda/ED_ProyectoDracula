@@ -3,6 +3,7 @@
 #include "VCortarMazo.h"
 #include "VGanador.h"
 #include "Vprincipal.h"
+#include "VDireccion.h"
 
 using namespace System;
 using namespace System::Windows::Forms;

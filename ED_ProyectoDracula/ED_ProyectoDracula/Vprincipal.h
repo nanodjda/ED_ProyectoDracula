@@ -1,6 +1,8 @@
 #pragma once
 
 #include "VCartasJugador.h"
+#include "VDireccion.h"
+#include "Tablero.h"
 
 namespace ED_ProyectoDracula {
 
@@ -101,22 +103,32 @@ namespace ED_ProyectoDracula {
 			this->ResumeLayout(false);
 
 		}
-#pragma endregion
-	private: System::Void bVer1_Click(System::Object^  sender, System::EventArgs^  e) {
-		VCartasJugador^ vCJ1 = gcnew VCartasJugador();
-		vCJ1->Show();
-	}
+	#pragma endregion
+		private: System::Void bVer1_Click(System::Object^  sender, System::EventArgs^  e) {
+			VCartasJugador^ vCJ1 = gcnew VCartasJugador();
+			vCJ1->Show();
+		}
 
-	private: System::Void bVer2_Click(System::Object^  sender, System::EventArgs^  e) {
-		VCartasJugador^ vCJ2 = gcnew VCartasJugador();
-		vCJ2->Show();
-	}
+		private: System::Void bVer2_Click(System::Object^  sender, System::EventArgs^  e) {
+			VCartasJugador^ vCJ2 = gcnew VCartasJugador();
+			vCJ2->Show();
+		}
 
+		private: System::Void Vprincipal_Load(System::Object^  sender, System::EventArgs^  e) {
 
-	private: System::Void Vprincipal_Load(System::Object^  sender, System::EventArgs^  e) {
-	}
-	private: System::Void Vprincipal_FormClosing(System::Object^  sender, System::Windows::Forms::FormClosingEventArgs^  e) {
-		Application::Exit();
-	}
+			VDireccion^ vDir = gcnew VDireccion();
+			vDir->ShowDialog();
+
+			Tablero^ tJuego = Tablero::Instance;
+			int ronda = 1;
+			Console::WriteLine(tJuego->getJActual());
+			Console::WriteLine(tJuego->getpDir1());
+			Console::WriteLine(tJuego->getpDir2());
+
+		}
+
+		private: System::Void Vprincipal_FormClosing(System::Object^  sender, System::Windows::Forms::FormClosingEventArgs^  e) {
+			Application::Exit();
+		}
 	};
 }

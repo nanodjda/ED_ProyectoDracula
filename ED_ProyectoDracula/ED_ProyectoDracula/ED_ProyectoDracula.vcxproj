@@ -134,7 +134,9 @@
     <ClCompile Include="AStack.cpp" />
     <ClCompile Include="Carta.cpp" />
     <ClCompile Include="Deck.cpp" />
+    <ClCompile Include="Tablero.cpp" />
     <ClCompile Include="VCartasJugador.cpp" />
+    <ClCompile Include="VDireccion.cpp" />
     <ClCompile Include="VGanador.cpp" />
     <ClCompile Include="VInicial.cpp" />
     <ClCompile Include="Vprincipal.cpp" />
@@ -144,10 +146,14 @@
     <ClInclude Include="Carta.h" />
     <ClInclude Include="Deck.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="Tablero.h" />
     <ClInclude Include="VCartasJugador.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="VCortarMazo.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="VDireccion.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="VGanador.h">
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VCortarMazo.resx">
       <DependentUpon>VCortarMazo.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VDireccion.resx">
+      <DependentUpon>VDireccion.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VGanador.resx">
       <DependentUpon>VGanador.h</DependentUpon>

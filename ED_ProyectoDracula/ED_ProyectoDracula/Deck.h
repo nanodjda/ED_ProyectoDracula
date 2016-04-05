@@ -61,7 +61,6 @@ public:
 		return deck[0];
 	}
 
-	
 	void cortar(int pos) {
 		if (pos != 0 && pos != 53) {
 			AStack^ pila;
