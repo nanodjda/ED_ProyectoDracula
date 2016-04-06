@@ -21,6 +21,7 @@ private:
 
 public:
 	Deck() {
+		contador = 0;
 		ya = false;
 		array<String^>^ caras = { "As","Dos","Tres","Cuatro","Cinco","Seis","Siete","Ocho","Nueve","Diez",
 			"Jack","Dama","Rey" };

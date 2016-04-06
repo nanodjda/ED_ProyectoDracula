@@ -42,6 +42,8 @@ namespace ED_ProyectoDracula {
 	private: System::Windows::Forms::Button^  bVer1;
 	protected:
 	private: System::Windows::Forms::Button^  bVer2;
+	private: System::Windows::Forms::Button^  b5;
+	private: System::Windows::Forms::Button^  button1;
 	private:
 		/// <summary>
 		/// Variable del diseñador necesaria.
@@ -58,6 +60,8 @@ namespace ED_ProyectoDracula {
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Vprincipal::typeid));
 			this->bVer1 = (gcnew System::Windows::Forms::Button());
 			this->bVer2 = (gcnew System::Windows::Forms::Button());
+			this->b5 = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// bVer1
@@ -88,6 +92,28 @@ namespace ED_ProyectoDracula {
 			this->bVer2->UseVisualStyleBackColor = false;
 			this->bVer2->Click += gcnew System::EventHandler(this, &Vprincipal::bVer2_Click);
 			// 
+			// b5
+			// 
+			this->b5->BackColor = System::Drawing::Color::Transparent;
+			this->b5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->b5->FlatAppearance->BorderSize = 0;
+			this->b5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->b5->Location = System::Drawing::Point(335, 223);
+			this->b5->Name = L"b5";
+			this->b5->Size = System::Drawing::Size(91, 110);
+			this->b5->TabIndex = 2;
+			this->b5->UseVisualStyleBackColor = false;
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(648, 78);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->TabIndex = 3;
+			this->button1->Text = L"button1";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &Vprincipal::button1_Click);
+			// 
 			// Vprincipal
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -95,6 +121,8 @@ namespace ED_ProyectoDracula {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(784, 562);
+			this->Controls->Add(this->button1);
+			this->Controls->Add(this->b5);
 			this->Controls->Add(this->bVer2);
 			this->Controls->Add(this->bVer1);
 			this->Name = L"Vprincipal";
@@ -117,16 +145,20 @@ namespace ED_ProyectoDracula {
 
 		private: System::Void Vprincipal_Load(System::Object^  sender, System::EventArgs^  e) {
 
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(VCartasJugador::typeid));
 			Deck^ mazo = Deck::Instance;
 			mazo->mezclar();
 			VDireccion^ vDir = gcnew VDireccion();
 			vDir->ShowDialog();
 
 			Tablero^ tJuego = Tablero::Instance;
+			int ronda = 6;
+			while (ronda <= 6) {
+				this->b5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(mazo->topCarta()->getDireccion())));
+				tJuego->repartir();
+				ronda++;
+			}
 
-			tJuego->repartir();
-
-			int ronda = 1;
 			Console::WriteLine(tJuego->getJActual());
 			Console::WriteLine(tJuego->getpDir1());
 			Console::WriteLine(tJuego->getpDir2());
@@ -136,5 +168,9 @@ namespace ED_ProyectoDracula {
 		private: System::Void Vprincipal_FormClosing(System::Object^  sender, System::Windows::Forms::FormClosingEventArgs^  e) {
 			Application::Exit();
 		}
-	};
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+		Tablero^ tJuego = Tablero::Instance;
+		tJuego->repartir();
+	}
+};
 }
