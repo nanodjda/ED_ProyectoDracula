@@ -56,38 +56,45 @@ namespace ED_ProyectoDracula {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(VDireccion::typeid));
 			this->bHorizontal = (gcnew System::Windows::Forms::Button());
 			this->bVertical = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// bHorizontal
 			// 
-			this->bHorizontal->Location = System::Drawing::Point(73, 71);
+			this->bHorizontal->BackColor = System::Drawing::Color::Transparent;
+			this->bHorizontal->FlatAppearance->BorderSize = 0;
+			this->bHorizontal->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bHorizontal->Location = System::Drawing::Point(43, 77);
 			this->bHorizontal->Name = L"bHorizontal";
-			this->bHorizontal->Size = System::Drawing::Size(75, 23);
+			this->bHorizontal->Size = System::Drawing::Size(176, 60);
 			this->bHorizontal->TabIndex = 0;
-			this->bHorizontal->Text = L"Horizontal";
-			this->bHorizontal->UseVisualStyleBackColor = true;
+			this->bHorizontal->UseVisualStyleBackColor = false;
 			this->bHorizontal->Click += gcnew System::EventHandler(this, &VDireccion::bHorizontal_Click);
 			// 
 			// bVertical
 			// 
-			this->bVertical->Location = System::Drawing::Point(237, 71);
+			this->bVertical->BackColor = System::Drawing::Color::Transparent;
+			this->bVertical->FlatAppearance->BorderSize = 0;
+			this->bVertical->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bVertical->Location = System::Drawing::Point(43, 182);
 			this->bVertical->Name = L"bVertical";
-			this->bVertical->Size = System::Drawing::Size(75, 23);
+			this->bVertical->Size = System::Drawing::Size(176, 48);
 			this->bVertical->TabIndex = 1;
-			this->bVertical->Text = L"Vertical";
-			this->bVertical->UseVisualStyleBackColor = true;
+			this->bVertical->UseVisualStyleBackColor = false;
 			this->bVertical->Click += gcnew System::EventHandler(this, &VDireccion::bVertical_Click);
 			// 
-			// VDireccioon
+			// VDireccion
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(377, 176);
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(412, 318);
 			this->Controls->Add(this->bVertical);
 			this->Controls->Add(this->bHorizontal);
-			this->Name = L"VDireccioon";
+			this->Name = L"VDireccion";
 			this->Text = L"VDireccioon";
 			this->ResumeLayout(false);
 
