@@ -39,7 +39,7 @@ namespace ED_ProyectoDracula {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^  bVer1;
+
 	protected:
 	private: System::Windows::Forms::Button^  bVer2;
 	private: System::Windows::Forms::Button^  b5;
@@ -52,7 +52,17 @@ namespace ED_ProyectoDracula {
 	private: System::Windows::Forms::Button^  b7;
 	private: System::Windows::Forms::Button^  b8;
 	private: System::Windows::Forms::Button^  b9;
-	public: System::Windows::Forms::Button^  bCartaActual;
+	private: System::Windows::Forms::Button^  Campo1;
+	private: System::Windows::Forms::Button^  Campo2;
+	private: System::Windows::Forms::Button^  Campo3;
+	private: System::Windows::Forms::Button^  Campo4;
+	private: System::Windows::Forms::Label^  lJugadorActual;
+	private: System::Windows::Forms::Button^  bVer1;
+	private: System::Windows::Forms::Label^  dir1;
+	private: System::Windows::Forms::Label^  dir2;
+	private: System::Windows::Forms::Label^  lRonda;
+
+
 
 	private:
 		/// <summary>
@@ -68,7 +78,6 @@ namespace ED_ProyectoDracula {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Vprincipal::typeid));
-			this->bVer1 = (gcnew System::Windows::Forms::Button());
 			this->bVer2 = (gcnew System::Windows::Forms::Button());
 			this->b5 = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
@@ -80,22 +89,16 @@ namespace ED_ProyectoDracula {
 			this->b7 = (gcnew System::Windows::Forms::Button());
 			this->b8 = (gcnew System::Windows::Forms::Button());
 			this->b9 = (gcnew System::Windows::Forms::Button());
-			this->bCartaActual = (gcnew System::Windows::Forms::Button());
+			this->Campo1 = (gcnew System::Windows::Forms::Button());
+			this->Campo2 = (gcnew System::Windows::Forms::Button());
+			this->Campo3 = (gcnew System::Windows::Forms::Button());
+			this->Campo4 = (gcnew System::Windows::Forms::Button());
+			this->lJugadorActual = (gcnew System::Windows::Forms::Label());
+			this->bVer1 = (gcnew System::Windows::Forms::Button());
+			this->dir1 = (gcnew System::Windows::Forms::Label());
+			this->dir2 = (gcnew System::Windows::Forms::Label());
+			this->lRonda = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
-			// 
-			// bVer1
-			// 
-			this->bVer1->BackColor = System::Drawing::Color::Transparent;
-			this->bVer1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bVer1.BackgroundImage")));
-			this->bVer1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->bVer1->FlatAppearance->BorderSize = 0;
-			this->bVer1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->bVer1->Location = System::Drawing::Point(354, 18);
-			this->bVer1->Name = L"bVer1";
-			this->bVer1->Size = System::Drawing::Size(142, 57);
-			this->bVer1->TabIndex = 0;
-			this->bVer1->UseVisualStyleBackColor = false;
-			this->bVer1->Click += gcnew System::EventHandler(this, &Vprincipal::bVer1_Click);
 			// 
 			// bVer2
 			// 
@@ -104,7 +107,7 @@ namespace ED_ProyectoDracula {
 			this->bVer2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->bVer2->FlatAppearance->BorderSize = 0;
 			this->bVer2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->bVer2->Location = System::Drawing::Point(354, 493);
+			this->bVer2->Location = System::Drawing::Point(12, 251);
 			this->bVer2->Name = L"bVer2";
 			this->bVer2->Size = System::Drawing::Size(142, 57);
 			this->bVer2->TabIndex = 1;
@@ -117,16 +120,16 @@ namespace ED_ProyectoDracula {
 			this->b5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->b5->FlatAppearance->BorderSize = 0;
 			this->b5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->b5->Location = System::Drawing::Point(329, 219);
+			this->b5->Location = System::Drawing::Point(449, 227);
 			this->b5->Name = L"b5";
-			this->b5->Size = System::Drawing::Size(102, 117);
+			this->b5->Size = System::Drawing::Size(80, 104);
 			this->b5->TabIndex = 2;
 			this->b5->UseVisualStyleBackColor = false;
 			this->b5->Click += gcnew System::EventHandler(this, &Vprincipal::b5_Click);
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(648, 78);
+			this->button1->Location = System::Drawing::Point(675, 51);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(75, 23);
 			this->button1->TabIndex = 3;
@@ -140,9 +143,9 @@ namespace ED_ProyectoDracula {
 			this->b1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->b1->FlatAppearance->BorderSize = 0;
 			this->b1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->b1->Location = System::Drawing::Point(212, 93);
+			this->b1->Location = System::Drawing::Point(334, 94);
 			this->b1->Name = L"b1";
-			this->b1->Size = System::Drawing::Size(85, 104);
+			this->b1->Size = System::Drawing::Size(80, 104);
 			this->b1->TabIndex = 4;
 			this->b1->UseVisualStyleBackColor = false;
 			// 
@@ -152,9 +155,9 @@ namespace ED_ProyectoDracula {
 			this->b2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->b2->FlatAppearance->BorderSize = 0;
 			this->b2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->b2->Location = System::Drawing::Point(339, 93);
+			this->b2->Location = System::Drawing::Point(449, 94);
 			this->b2->Name = L"b2";
-			this->b2->Size = System::Drawing::Size(85, 104);
+			this->b2->Size = System::Drawing::Size(80, 104);
 			this->b2->TabIndex = 5;
 			this->b2->UseVisualStyleBackColor = false;
 			// 
@@ -164,9 +167,9 @@ namespace ED_ProyectoDracula {
 			this->b3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->b3->FlatAppearance->BorderSize = 0;
 			this->b3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->b3->Location = System::Drawing::Point(469, 93);
+			this->b3->Location = System::Drawing::Point(567, 94);
 			this->b3->Name = L"b3";
-			this->b3->Size = System::Drawing::Size(85, 104);
+			this->b3->Size = System::Drawing::Size(80, 104);
 			this->b3->TabIndex = 6;
 			this->b3->UseVisualStyleBackColor = false;
 			this->b3->Click += gcnew System::EventHandler(this, &Vprincipal::b3_Click);
@@ -177,9 +180,9 @@ namespace ED_ProyectoDracula {
 			this->b4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->b4->FlatAppearance->BorderSize = 0;
 			this->b4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->b4->Location = System::Drawing::Point(212, 225);
+			this->b4->Location = System::Drawing::Point(334, 227);
 			this->b4->Name = L"b4";
-			this->b4->Size = System::Drawing::Size(83, 104);
+			this->b4->Size = System::Drawing::Size(80, 104);
 			this->b4->TabIndex = 7;
 			this->b4->UseVisualStyleBackColor = false;
 			// 
@@ -189,11 +192,12 @@ namespace ED_ProyectoDracula {
 			this->b6->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->b6->FlatAppearance->BorderSize = 0;
 			this->b6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->b6->Location = System::Drawing::Point(471, 227);
+			this->b6->Location = System::Drawing::Point(567, 227);
 			this->b6->Name = L"b6";
-			this->b6->Size = System::Drawing::Size(83, 104);
+			this->b6->Size = System::Drawing::Size(80, 104);
 			this->b6->TabIndex = 8;
 			this->b6->UseVisualStyleBackColor = false;
+			this->b6->Click += gcnew System::EventHandler(this, &Vprincipal::b6_Click);
 			// 
 			// b7
 			// 
@@ -201,9 +205,9 @@ namespace ED_ProyectoDracula {
 			this->b7->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->b7->FlatAppearance->BorderSize = 0;
 			this->b7->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->b7->Location = System::Drawing::Point(212, 360);
+			this->b7->Location = System::Drawing::Point(334, 361);
 			this->b7->Name = L"b7";
-			this->b7->Size = System::Drawing::Size(83, 104);
+			this->b7->Size = System::Drawing::Size(80, 104);
 			this->b7->TabIndex = 9;
 			this->b7->UseVisualStyleBackColor = false;
 			// 
@@ -213,9 +217,9 @@ namespace ED_ProyectoDracula {
 			this->b8->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->b8->FlatAppearance->BorderSize = 0;
 			this->b8->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->b8->Location = System::Drawing::Point(339, 360);
+			this->b8->Location = System::Drawing::Point(449, 361);
 			this->b8->Name = L"b8";
-			this->b8->Size = System::Drawing::Size(83, 104);
+			this->b8->Size = System::Drawing::Size(80, 104);
 			this->b8->TabIndex = 10;
 			this->b8->UseVisualStyleBackColor = false;
 			// 
@@ -225,24 +229,129 @@ namespace ED_ProyectoDracula {
 			this->b9->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->b9->FlatAppearance->BorderSize = 0;
 			this->b9->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->b9->Location = System::Drawing::Point(469, 360);
+			this->b9->Location = System::Drawing::Point(567, 361);
 			this->b9->Name = L"b9";
-			this->b9->Size = System::Drawing::Size(83, 104);
+			this->b9->Size = System::Drawing::Size(80, 104);
 			this->b9->TabIndex = 11;
 			this->b9->UseVisualStyleBackColor = false;
 			// 
-			// bCartaActual
+			// Campo1
 			// 
-			this->bCartaActual->BackColor = System::Drawing::Color::Transparent;
-			this->bCartaActual->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->bCartaActual->Enabled = false;
-			this->bCartaActual->FlatAppearance->BorderSize = 0;
-			this->bCartaActual->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->bCartaActual->Location = System::Drawing::Point(673, 373);
-			this->bCartaActual->Name = L"bCartaActual";
-			this->bCartaActual->Size = System::Drawing::Size(85, 104);
-			this->bCartaActual->TabIndex = 12;
-			this->bCartaActual->UseVisualStyleBackColor = false;
+			this->Campo1->BackColor = System::Drawing::Color::Transparent;
+			this->Campo1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->Campo1->FlatAppearance->BorderSize = 0;
+			this->Campo1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Campo1->Location = System::Drawing::Point(781, 130);
+			this->Campo1->Name = L"Campo1";
+			this->Campo1->Size = System::Drawing::Size(65, 90);
+			this->Campo1->TabIndex = 12;
+			this->Campo1->UseVisualStyleBackColor = false;
+			this->Campo1->Click += gcnew System::EventHandler(this, &Vprincipal::Campo1_Click);
+			// 
+			// Campo2
+			// 
+			this->Campo2->BackColor = System::Drawing::Color::Transparent;
+			this->Campo2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->Campo2->FlatAppearance->BorderSize = 0;
+			this->Campo2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Campo2->Location = System::Drawing::Point(878, 130);
+			this->Campo2->Name = L"Campo2";
+			this->Campo2->Size = System::Drawing::Size(65, 90);
+			this->Campo2->TabIndex = 13;
+			this->Campo2->UseVisualStyleBackColor = false;
+			this->Campo2->Click += gcnew System::EventHandler(this, &Vprincipal::Campo2_Click);
+			// 
+			// Campo3
+			// 
+			this->Campo3->BackColor = System::Drawing::Color::Transparent;
+			this->Campo3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->Campo3->FlatAppearance->BorderSize = 0;
+			this->Campo3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Campo3->Location = System::Drawing::Point(781, 230);
+			this->Campo3->Name = L"Campo3";
+			this->Campo3->Size = System::Drawing::Size(65, 90);
+			this->Campo3->TabIndex = 14;
+			this->Campo3->UseVisualStyleBackColor = false;
+			this->Campo3->Click += gcnew System::EventHandler(this, &Vprincipal::Campo3_Click);
+			// 
+			// Campo4
+			// 
+			this->Campo4->BackColor = System::Drawing::Color::Transparent;
+			this->Campo4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->Campo4->FlatAppearance->BorderSize = 0;
+			this->Campo4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Campo4->Location = System::Drawing::Point(878, 230);
+			this->Campo4->Name = L"Campo4";
+			this->Campo4->Size = System::Drawing::Size(65, 90);
+			this->Campo4->TabIndex = 15;
+			this->Campo4->UseVisualStyleBackColor = false;
+			this->Campo4->Click += gcnew System::EventHandler(this, &Vprincipal::Campo4_Click);
+			// 
+			// lJugadorActual
+			// 
+			this->lJugadorActual->AutoSize = true;
+			this->lJugadorActual->BackColor = System::Drawing::Color::Transparent;
+			this->lJugadorActual->Font = (gcnew System::Drawing::Font(L"Bradley Hand ITC", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lJugadorActual->ForeColor = System::Drawing::Color::White;
+			this->lJugadorActual->Location = System::Drawing::Point(776, 69);
+			this->lJugadorActual->Name = L"lJugadorActual";
+			this->lJugadorActual->Size = System::Drawing::Size(66, 28);
+			this->lJugadorActual->TabIndex = 16;
+			this->lJugadorActual->Text = L"label1";
+			// 
+			// bVer1
+			// 
+			this->bVer1->BackColor = System::Drawing::Color::Transparent;
+			this->bVer1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bVer1.BackgroundImage")));
+			this->bVer1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->bVer1->FlatAppearance->BorderSize = 0;
+			this->bVer1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->bVer1->Location = System::Drawing::Point(12, 141);
+			this->bVer1->Name = L"bVer1";
+			this->bVer1->Size = System::Drawing::Size(142, 57);
+			this->bVer1->TabIndex = 0;
+			this->bVer1->UseVisualStyleBackColor = false;
+			this->bVer1->Click += gcnew System::EventHandler(this, &Vprincipal::bVer1_Click);
+			// 
+			// dir1
+			// 
+			this->dir1->AutoSize = true;
+			this->dir1->BackColor = System::Drawing::Color::Transparent;
+			this->dir1->Font = (gcnew System::Drawing::Font(L"Bradley Hand ITC", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->dir1->ForeColor = System::Drawing::Color::White;
+			this->dir1->Location = System::Drawing::Point(527, 29);
+			this->dir1->Name = L"dir1";
+			this->dir1->Size = System::Drawing::Size(66, 28);
+			this->dir1->TabIndex = 17;
+			this->dir1->Text = L"label1";
+			// 
+			// dir2
+			// 
+			this->dir2->AutoSize = true;
+			this->dir2->BackColor = System::Drawing::Color::Transparent;
+			this->dir2->Font = (gcnew System::Drawing::Font(L"Bradley Hand ITC", 16, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->dir2->ForeColor = System::Drawing::Color::White;
+			this->dir2->Location = System::Drawing::Point(527, 502);
+			this->dir2->Name = L"dir2";
+			this->dir2->Size = System::Drawing::Size(66, 28);
+			this->dir2->TabIndex = 18;
+			this->dir2->Text = L"label1";
+			// 
+			// lRonda
+			// 
+			this->lRonda->AutoSize = true;
+			this->lRonda->BackColor = System::Drawing::Color::Transparent;
+			this->lRonda->Font = (gcnew System::Drawing::Font(L"Bradley Hand ITC", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->lRonda->ForeColor = System::Drawing::Color::White;
+			this->lRonda->Location = System::Drawing::Point(825, 23);
+			this->lRonda->Name = L"lRonda";
+			this->lRonda->Size = System::Drawing::Size(56, 24);
+			this->lRonda->TabIndex = 19;
+			this->lRonda->Text = L"label1";
 			// 
 			// Vprincipal
 			// 
@@ -250,8 +359,15 @@ namespace ED_ProyectoDracula {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(784, 562);
-			this->Controls->Add(this->bCartaActual);
+			this->ClientSize = System::Drawing::Size(984, 562);
+			this->Controls->Add(this->lRonda);
+			this->Controls->Add(this->dir2);
+			this->Controls->Add(this->dir1);
+			this->Controls->Add(this->lJugadorActual);
+			this->Controls->Add(this->Campo4);
+			this->Controls->Add(this->Campo3);
+			this->Controls->Add(this->Campo2);
+			this->Controls->Add(this->Campo1);
 			this->Controls->Add(this->b9);
 			this->Controls->Add(this->b8);
 			this->Controls->Add(this->b7);
@@ -269,6 +385,7 @@ namespace ED_ProyectoDracula {
 			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &Vprincipal::Vprincipal_FormClosing);
 			this->Load += gcnew System::EventHandler(this, &Vprincipal::Vprincipal_Load);
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 	#pragma endregion
@@ -284,20 +401,36 @@ namespace ED_ProyectoDracula {
 
 		private: System::Void Vprincipal_Load(System::Object^  sender, System::EventArgs^  e) {
 
-			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(VCartasJugador::typeid));
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Vprincipal::typeid));
 			Deck^ mazo = Deck::Instance;
 			mazo->mezclar();
 			VDireccion^ vDir = gcnew VDireccion();
 			vDir->ShowDialog();
-
 			Tablero^ tJuego = Tablero::Instance;
-			int ronda = 6;
+
+			tJuego->getpDir1() == 0 ? this->dir1->Text = "Horizontal" : this->dir1->Text = "Vertical";
+			tJuego->getpDir2() == 0 ? this->dir2->Text = "Horizontal" : this->dir2->Text = "Vertical";
+
+
+			int ronda = 1;
 			while (ronda <= 6) {
+				this->lRonda->Text = "Ronda " + ronda;
 				this->b5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(mazo->topCarta()->getDireccion())));
 				tJuego->repartir();
 				for (int x = 0; x < 8; x++) {
-					Console::WriteLine("Turno de -> " + tJuego->getJActual());
-
+					this->lJugadorActual->Text = "Jugador " + tJuego->getJActual();
+					if (tJuego->getJActual() == 1) {
+						this->Campo1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ1()[0]->getDireccion())));
+						this->Campo2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ1()[1]->getDireccion())));
+						this->Campo3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ1()[2]->getDireccion())));
+						this->Campo4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ1()[3]->getDireccion())));
+					}
+					else {
+						this->Campo1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ2()[0]->getDireccion())));
+						this->Campo2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ2()[1]->getDireccion())));
+						this->Campo3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ2()[2]->getDireccion())));
+						this->Campo4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ2()[3]->getDireccion())));
+					}
 				}
 				ronda++;
 			}
@@ -307,9 +440,6 @@ namespace ED_ProyectoDracula {
 			Console::WriteLine(tJuego->getpDir2());
 
 		}
-	private: System::Void Vprincipal_Load2(System::Object^  sender, System::EventArgs^  e) {
-		
-	}
 
 		private: System::Void Vprincipal_FormClosing(System::Object^  sender, System::Windows::Forms::FormClosingEventArgs^  e) {
 			Application::Exit();
@@ -322,5 +452,17 @@ namespace ED_ProyectoDracula {
 	}
 	private: System::Void b3_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
+	private: System::Void b6_Click(System::Object^  sender, System::EventArgs^  e) {
+	}
+
+	private: System::Void Campo1_Click(System::Object^  sender, System::EventArgs^  e) {
+
+	}
+	private: System::Void Campo2_Click(System::Object^  sender, System::EventArgs^  e) {
+	}
+	private: System::Void Campo3_Click(System::Object^  sender, System::EventArgs^  e) {
+	}
+	private: System::Void Campo4_Click(System::Object^  sender, System::EventArgs^  e) {
+}
 };
 }

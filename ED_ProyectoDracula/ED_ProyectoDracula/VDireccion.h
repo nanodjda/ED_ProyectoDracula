@@ -112,6 +112,8 @@ namespace ED_ProyectoDracula {
 			tJuego->setpDir2(0);
 		}
 
+		tJuego->getJActual() == 1 ? tJuego->setJActual(2) : tJuego->setJActual(1);
+
 		this->Close();
 
 	}
@@ -126,6 +128,9 @@ namespace ED_ProyectoDracula {
 			tJuego->setpDir1(0);
 			tJuego->setpDir2(1);
 		}
+
+		tJuego->getJActual() == 1 ? tJuego->setJActual(2) : tJuego->setJActual(1);
+
 		this->Close();
 	}
 	};
