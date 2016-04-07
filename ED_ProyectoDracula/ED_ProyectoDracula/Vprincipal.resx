@@ -275,7 +275,7 @@
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABHkAAAJYCAIAAAB5Lq0mAAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABS
-        CAABFVgAADqXAAAXb9daH5AAAAAJcEhZcwAACw0AAAsNAe0HwCwAAP+WSURBVHhe7P1ntB7XdSWKooMl
+        CAABFVgAADqXAAAXb9daH5AAAAAJcEhZcwAACwwAAAsMAT9AIsgAAP+WSURBVHhe7P1ntB7XdSWKooMl
         y5YlUWKOYALBgJwOcjrIBznnnEmAAAOYs0gqUFSicpYs25Ily5YlOctBji05x3bbbfm2O9xud/94473f
         b+0915p77l11DgBSfa/vG2+MGuSH79RXX31Vu/Zec8255hr1+Vee+eBzp195+7323/c/c/d7nzz+nseP
         vPTY4Xc/euidD+9/8cE9z9+/87kz2545vcW2p09tevLuDb6dXP/Y8bWPHVvzyJGhhw6tOHdg2f17B+/b
@@ -11915,5 +11915,171 @@
         KlAWI16HUHCYbHejduwE09miz4dMqlJ1YdQk97VGS1Q5Vhx5nJpK1Fzf6CkS7gouaZxpLJr/L+x+tVJO
         M7pcAAAAAElFTkSuQmCC
 </value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="AsCorazon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\AsCorazon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AsDiamante" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\AsDiamante.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AsEspada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\AsEspada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AsTrebol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\AsTrebol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CincoCorazon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\CincoCorazon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CincoDiamante" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\CincoDiamante.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CincoEspada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\CincoEspada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CincoTrebol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\CincoTrebol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CuatroCorazon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\CuatroCorazon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CuatroDiamante" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\CuatroDiamante.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CuatroEspada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\CuatroEspada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CuatroTrebol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\CuatroTrebol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DamaCorazon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\DamaCorazon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DamaDiamante" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\DamaDiamante.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DamaEspada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\DamaEspada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DamaTrebol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\DamaTrebol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DiezCorazon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\DiezCorazon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DiezDiamante" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\DiezDiamante.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DiezEspada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\DiezEspada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DiezTrebol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\DiezTrebol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DosCorazon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\DosCorazon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DosDiamante" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\DosDiamante.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DosEspada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\DosEspada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DosTrebol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\DosTrebol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ED_ProyectoDracula" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>ED_ProyectoDracula.rc;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-16</value>
+  </data>
+  <data name="JackCorazon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\JackCorazon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="JackDiamante" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\JackDiamante.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="JackEspada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\JackEspada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="JackTrebol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\JackTrebol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="JokerNegro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\JokerNegro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="JokerRojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\JokerRojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NueveCorazon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\NueveCorazon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NueveDiamante" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\NueveDiamante.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NueveEspada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\NueveEspada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NueveTrebol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\NueveTrebol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OchoCorazon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\OchoCorazon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OchoDiamante" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\OchoDiamante.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OchoEspada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\OchoEspada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OchoTrebol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\OchoTrebol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ReyCorazon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\ReyCorazon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ReyDiamante" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\ReyDiamante.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ReyEspada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\ReyEspada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ReyTrebol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\ReyTrebol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SeisCorazon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\SeisCorazon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SeisDiamante" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\SeisDiamante.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SeisEspada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\SeisEspada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SeisTrebol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\SeisTrebol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SieteCorazon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\SieteCorazon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SieteDiamante" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\SieteDiamante.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SieteEspada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\SieteEspada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SieteTrebol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\SieteTrebol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TresCorazon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\TresCorazon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TresDiamante" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\TresDiamante.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TresEspada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\TresEspada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TresTrebol" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Recursos\PNG-cards-1.3\TresTrebol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
