@@ -131,6 +131,7 @@ namespace ED_ProyectoDracula {
 			this->Controls->Add(this->Campo1);
 			this->Name = L"VCartasJugador";
 			this->Text = L"VCartasJugador";
+			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &VCartasJugador::VCartasJugador_FormClosing);
 			this->Load += gcnew System::EventHandler(this, &VCartasJugador::VCartasJugador_Load);
 			this->ResumeLayout(false);
 
@@ -153,6 +154,7 @@ namespace ED_ProyectoDracula {
 			this->Campo3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ2()[2]->getDireccion())));
 			this->Campo4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ2()[3]->getDireccion())));
 		}
+
 		if (this->Campo1->BackgroundImage) {
 			this->Campo1->Enabled = true;
 		}
@@ -179,6 +181,19 @@ namespace ED_ProyectoDracula {
 		}
 		else {
 			this->Campo4->Enabled = false;
+		}
+
+		if (tJuego->getJActual() != jugador) {
+			this->Campo1->Enabled = false;
+			this->Campo2->Enabled = false;
+			this->Campo3->Enabled = false;
+			this->Campo4->Enabled = false;
+		}
+		else {
+			this->Campo1->Enabled = true;
+			this->Campo2->Enabled = true;
+			this->Campo3->Enabled = true;
+			this->Campo4->Enabled = true;
 		}
 
 	}
@@ -236,5 +251,7 @@ namespace ED_ProyectoDracula {
 		}
 		this->Hide();
 	}
+private: System::Void VCartasJugador_FormClosing(System::Object^  sender, System::Windows::Forms::FormClosingEventArgs^  e) {
+}
 };
 }
