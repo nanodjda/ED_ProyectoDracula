@@ -110,6 +110,8 @@ namespace ED_ProyectoDracula {
 			this->button3->BackColor = System::Drawing::Color::Transparent;
 			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button3->FlatAppearance->BorderSize = 0;
+			this->button3->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
+			this->button3->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
 			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button3->Location = System::Drawing::Point(165, 78);
 			this->button3->Name = L"button3";

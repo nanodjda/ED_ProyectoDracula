@@ -12,6 +12,11 @@ private:
 	String^ direccion;
 
 public:
+
+	Carta() {
+
+	}
+
 	Carta(String^ pCara, String^ pPalo) {
 		cara = pCara;
 		palo = pPalo;
@@ -20,6 +25,10 @@ public:
 
 	String^ print() {
 		return (cara + " de " + palo);
+	}
+
+	String^ getCara() {
+		return cara;
 	}
 
 	String^ getColor() {

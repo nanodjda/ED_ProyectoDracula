@@ -77,6 +77,7 @@ namespace ED_ProyectoDracula {
 			this->Campo1->Size = System::Drawing::Size(89, 115);
 			this->Campo1->TabIndex = 0;
 			this->Campo1->UseVisualStyleBackColor = false;
+			this->Campo1->Click += gcnew System::EventHandler(this, &VCartasJugador::Campo1_Click);
 			// 
 			// Campo2
 			// 
@@ -115,6 +116,7 @@ namespace ED_ProyectoDracula {
 			this->Campo4->Size = System::Drawing::Size(89, 115);
 			this->Campo4->TabIndex = 3;
 			this->Campo4->UseVisualStyleBackColor = false;
+			this->Campo4->Click += gcnew System::EventHandler(this, &VCartasJugador::Campo4_Click);
 			// 
 			// VCartasJugador
 			// 
@@ -151,11 +153,88 @@ namespace ED_ProyectoDracula {
 			this->Campo3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ2()[2]->getDireccion())));
 			this->Campo4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ2()[3]->getDireccion())));
 		}
+		if (this->Campo1->BackgroundImage) {
+			this->Campo1->Enabled = true;
+		}
+		else {
+			this->Campo1->Enabled = false;
+		}
+
+		if (this->Campo2->BackgroundImage) {
+			this->Campo2->Enabled = true;
+		}
+		else {
+			this->Campo2->Enabled = false;
+		}
+
+		if (this->Campo3->BackgroundImage) {
+			this->Campo3->Enabled = true;
+		}
+		else {
+			this->Campo3->Enabled = false;
+		}
+
+		if (this->Campo4->BackgroundImage) {
+			this->Campo4->Enabled = true;
+		}
+		else {
+			this->Campo4->Enabled = false;
+		}
+
+	}
+	private: System::Void Campo1_Click(System::Object^  sender, System::EventArgs^  e) {
+		Tablero^ tJuego = Tablero::Instance;
+
+		if (jugador == 1) {
+			tJuego->setCartaSeleccionada(tJuego->getCartasJ1()[0]);
+			tJuego->getCartasJ1()[0] = gcnew Carta("", "");
+		}
+		else {
+			tJuego->setCartaSeleccionada(tJuego->getCartasJ2()[0]);
+			tJuego->getCartasJ2()[0] = gcnew Carta("", "");
+		}
+
+		this->Hide();
 
 	}
 	private: System::Void Campo2_Click(System::Object^  sender, System::EventArgs^  e) {
+		Tablero^ tJuego = Tablero::Instance;
+
+		if (jugador == 1) {
+			tJuego->setCartaSeleccionada(tJuego->getCartasJ1()[1]);
+			tJuego->getCartasJ1()[1] = gcnew Carta("", "");
+		}
+		else {
+			tJuego->setCartaSeleccionada(tJuego->getCartasJ2()[1]);
+			tJuego->getCartasJ2()[1] = gcnew Carta("", "");
+		}
+		this->Hide();
 	}
 	private: System::Void Campo3_Click(System::Object^  sender, System::EventArgs^  e) {
+		Tablero^ tJuego = Tablero::Instance;
+
+		if (jugador == 1) {
+			tJuego->setCartaSeleccionada(tJuego->getCartasJ1()[2]);
+			tJuego->getCartasJ1()[2] = gcnew Carta("", "");
+		}
+		else {
+			tJuego->setCartaSeleccionada(tJuego->getCartasJ2()[2]);
+			tJuego->getCartasJ2()[2] = gcnew Carta("", "");
+		}
+		this->Hide();
+	}
+	private: System::Void Campo4_Click(System::Object^  sender, System::EventArgs^  e) {
+		Tablero^ tJuego = Tablero::Instance;
+
+		if (jugador == 1) {
+			tJuego->setCartaSeleccionada(tJuego->getCartasJ1()[3]);
+			tJuego->getCartasJ1()[3] = gcnew Carta("", "");
+		}
+		else {
+			tJuego->setCartaSeleccionada(tJuego->getCartasJ2()[3]);
+			tJuego->getCartasJ2()[3] = gcnew Carta("", "");
+		}
+		this->Hide();
 	}
 };
 }
