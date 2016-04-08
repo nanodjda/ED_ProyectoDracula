@@ -323,8 +323,9 @@ namespace ED_ProyectoDracula {
 			this->dir1->ForeColor = System::Drawing::Color::White;
 			this->dir1->Location = System::Drawing::Point(527, 29);
 			this->dir1->Name = L"dir1";
-			this->dir1->Size = System::Drawing::Size(0, 28);
+			this->dir1->Size = System::Drawing::Size(66, 28);
 			this->dir1->TabIndex = 17;
+			this->dir1->Text = L"label1";
 			// 
 			// dir2
 			// 
@@ -335,8 +336,9 @@ namespace ED_ProyectoDracula {
 			this->dir2->ForeColor = System::Drawing::Color::White;
 			this->dir2->Location = System::Drawing::Point(527, 502);
 			this->dir2->Name = L"dir2";
-			this->dir2->Size = System::Drawing::Size(0, 28);
+			this->dir2->Size = System::Drawing::Size(66, 28);
 			this->dir2->TabIndex = 18;
+			this->dir2->Text = L"label1";
 			// 
 			// lRonda
 			// 
@@ -382,7 +384,6 @@ namespace ED_ProyectoDracula {
 			this->Text = L"Drácula";
 			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &Vprincipal::Vprincipal_FormClosing);
 			this->Load += gcnew System::EventHandler(this, &Vprincipal::Vprincipal_Load);
-			this->Shown += gcnew System::EventHandler(this, &Vprincipal::Vprincipal_Shown);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -399,9 +400,17 @@ namespace ED_ProyectoDracula {
 		}
 
 		private: System::Void Vprincipal_Load(System::Object^  sender, System::EventArgs^  e) {
+
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Vprincipal::typeid));
 			Deck^ mazo = Deck::Instance;
+			mazo->mezclar();
+			VDireccion^ vDir = gcnew VDireccion();
+			vDir->ShowDialog();
 			Tablero^ tJuego = Tablero::Instance;
+
+			tJuego->getpDir1() == 0 ? this->dir1->Text = "Horizontal" : this->dir1->Text = "Vertical";
+			tJuego->getpDir2() == 0 ? this->dir2->Text = "Horizontal" : this->dir2->Text = "Vertical";
+
 
 			int ronda = 1;
 			while (ronda <= 6) {
@@ -432,116 +441,28 @@ namespace ED_ProyectoDracula {
 
 		}
 
-		/*private: System::Void Vprincipal_Load2(System::Object^  sender, System::EventArgs^  e) {
-
-			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Vprincipal::typeid));
-			Deck^ mazo = Deck::Instance;
-			Tablero^ tJuego = Tablero::Instance;
-
-			if (tJuego->getJActual() == 1) {
-				this->Campo1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ1()[0]->getDireccion())));
-				this->Campo2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ1()[1]->getDireccion())));
-				this->Campo3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ1()[2]->getDireccion())));
-				this->Campo4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ1()[3]->getDireccion())));
-			}
-			else {
-				this->Campo1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ2()[0]->getDireccion())));
-				this->Campo2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ2()[1]->getDireccion())));
-				this->Campo3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ2()[2]->getDireccion())));
-				this->Campo4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ2()[3]->getDireccion())));
-			}
-
-			Console::WriteLine(tJuego->getJActual());
-			Console::WriteLine(tJuego->getpDir1());
-			Console::WriteLine(tJuego->getpDir2());
-
-		}*/
-
-	private: System::Void Vprincipal_FormClosing(System::Object^  sender, System::Windows::Forms::FormClosingEventArgs^  e) {
-
-		Application::Exit();
-
-	}
-	
+		private: System::Void Vprincipal_FormClosing(System::Object^  sender, System::Windows::Forms::FormClosingEventArgs^  e) {
+			Application::Exit();
+		}
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 		Tablero^ tJuego = Tablero::Instance;
 		tJuego->repartir();
 	}
-	
 	private: System::Void b5_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
-	
 	private: System::Void b3_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
-	
 	private: System::Void b6_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
 
 	private: System::Void Campo1_Click(System::Object^  sender, System::EventArgs^  e) {
-		Tablero^ tJuego = Tablero::Instance;
 
-		if (tJuego->getJActual() == 1) {
-			tJuego->setCartaSeleccionada(tJuego->getCartasJ1()[0]);
-			tJuego->getCartasJ1()[0] = gcnew Carta("", "");
-		}
-		else {
-			tJuego->setCartaSeleccionada(tJuego->getCartasJ2()[0]);
-			tJuego->getCartasJ2()[0] = gcnew Carta("", "");
-		}
-
-		this->Show();
 	}
-
 	private: System::Void Campo2_Click(System::Object^  sender, System::EventArgs^  e) {
-		Tablero^ tJuego = Tablero::Instance;
-
-		if (tJuego->getJActual() == 1) {
-			tJuego->setCartaSeleccionada(tJuego->getCartasJ1()[1]);
-			tJuego->getCartasJ1()[1] = gcnew Carta("", "");
-		}
-		else {
-			tJuego->setCartaSeleccionada(tJuego->getCartasJ2()[1]);
-			tJuego->getCartasJ2()[1] = gcnew Carta("", "");
-		}
 	}
 	private: System::Void Campo3_Click(System::Object^  sender, System::EventArgs^  e) {
-		Tablero^ tJuego = Tablero::Instance;
-
-		if (tJuego->getJActual() == 1) {
-			tJuego->setCartaSeleccionada(tJuego->getCartasJ1()[2]);
-			tJuego->getCartasJ1()[2] = gcnew Carta("", "");
-		}
-		else {
-			tJuego->setCartaSeleccionada(tJuego->getCartasJ2()[2]);
-			tJuego->getCartasJ2()[2] = gcnew Carta("", "");
-		}
 	}
 	private: System::Void Campo4_Click(System::Object^  sender, System::EventArgs^  e) {
-		Tablero^ tJuego = Tablero::Instance;
-
-		if (tJuego->getJActual() == 1) {
-			tJuego->setCartaSeleccionada(tJuego->getCartasJ1()[3]);
-			tJuego->getCartasJ1()[3] = gcnew Carta("", "");
-		}
-		else {
-			tJuego->setCartaSeleccionada(tJuego->getCartasJ2()[3]);
-			tJuego->getCartasJ2()[3] = gcnew Carta("", "");
-		}
-}
-private: System::Void Vprincipal_Shown(System::Object^  sender, System::EventArgs^  e) {
-
-	System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Vprincipal::typeid));
-	Deck^ mazo = Deck::Instance;
-	mazo->mezclar();
-	VDireccion^ vDir = gcnew VDireccion();
-	vDir->ShowDialog();
-
-	Tablero^ tJuego = Tablero::Instance;
-
-	tJuego->getpDir1() == 0 ? this->dir1->Text = "Horizontal" : this->dir1->Text = "Vertical";
-	tJuego->getpDir2() == 0 ? this->dir2->Text = "Horizontal" : this->dir2->Text = "Vertical";
-	this->lJugadorActual->Text = "Jugador " + tJuego->getJActual();
-
 }
 };
 }
