@@ -425,10 +425,6 @@ public:
 		cartaSeleccionada = pCarta;
 	}
 
-	Carta^ getCartaSeleccionada() {
-		return cartaSeleccionada;
-	}
-
 	static property Tablero^ Instance { Tablero^ get() { return m_instance; } }
 };
 
