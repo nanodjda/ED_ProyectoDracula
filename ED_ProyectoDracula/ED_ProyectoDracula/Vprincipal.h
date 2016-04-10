@@ -52,10 +52,10 @@ namespace ED_ProyectoDracula {
 	private: System::Windows::Forms::Button^  b7;
 	private: System::Windows::Forms::Button^  b8;
 	private: System::Windows::Forms::Button^  b9;
-	private: System::Windows::Forms::Button^  Campo1;
-	private: System::Windows::Forms::Button^  Campo2;
-	private: System::Windows::Forms::Button^  Campo3;
-	private: System::Windows::Forms::Button^  Campo4;
+
+
+
+
 	private: System::Windows::Forms::Label^  lJugadorActual;
 	private: System::Windows::Forms::Button^  bVer1;
 	private: System::Windows::Forms::Label^  dir1;
@@ -89,10 +89,6 @@ namespace ED_ProyectoDracula {
 			this->b7 = (gcnew System::Windows::Forms::Button());
 			this->b8 = (gcnew System::Windows::Forms::Button());
 			this->b9 = (gcnew System::Windows::Forms::Button());
-			this->Campo1 = (gcnew System::Windows::Forms::Button());
-			this->Campo2 = (gcnew System::Windows::Forms::Button());
-			this->Campo3 = (gcnew System::Windows::Forms::Button());
-			this->Campo4 = (gcnew System::Windows::Forms::Button());
 			this->lJugadorActual = (gcnew System::Windows::Forms::Label());
 			this->bVer1 = (gcnew System::Windows::Forms::Button());
 			this->dir1 = (gcnew System::Windows::Forms::Label());
@@ -107,9 +103,9 @@ namespace ED_ProyectoDracula {
 			this->bVer2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->bVer2->FlatAppearance->BorderSize = 0;
 			this->bVer2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->bVer2->Location = System::Drawing::Point(12, 251);
+			this->bVer2->Location = System::Drawing::Point(650, 494);
 			this->bVer2->Name = L"bVer2";
-			this->bVer2->Size = System::Drawing::Size(142, 57);
+			this->bVer2->Size = System::Drawing::Size(104, 42);
 			this->bVer2->TabIndex = 1;
 			this->bVer2->UseVisualStyleBackColor = false;
 			this->bVer2->Click += gcnew System::EventHandler(this, &Vprincipal::bVer2_Click);
@@ -129,7 +125,7 @@ namespace ED_ProyectoDracula {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(675, 51);
+			this->button1->Location = System::Drawing::Point(829, 308);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(75, 23);
 			this->button1->TabIndex = 3;
@@ -235,58 +231,6 @@ namespace ED_ProyectoDracula {
 			this->b9->TabIndex = 11;
 			this->b9->UseVisualStyleBackColor = false;
 			// 
-			// Campo1
-			// 
-			this->Campo1->BackColor = System::Drawing::Color::Transparent;
-			this->Campo1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->Campo1->FlatAppearance->BorderSize = 0;
-			this->Campo1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->Campo1->Location = System::Drawing::Point(781, 130);
-			this->Campo1->Name = L"Campo1";
-			this->Campo1->Size = System::Drawing::Size(65, 90);
-			this->Campo1->TabIndex = 12;
-			this->Campo1->UseVisualStyleBackColor = false;
-			this->Campo1->Click += gcnew System::EventHandler(this, &Vprincipal::Campo1_Click);
-			// 
-			// Campo2
-			// 
-			this->Campo2->BackColor = System::Drawing::Color::Transparent;
-			this->Campo2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->Campo2->FlatAppearance->BorderSize = 0;
-			this->Campo2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->Campo2->Location = System::Drawing::Point(878, 130);
-			this->Campo2->Name = L"Campo2";
-			this->Campo2->Size = System::Drawing::Size(65, 90);
-			this->Campo2->TabIndex = 13;
-			this->Campo2->UseVisualStyleBackColor = false;
-			this->Campo2->Click += gcnew System::EventHandler(this, &Vprincipal::Campo2_Click);
-			// 
-			// Campo3
-			// 
-			this->Campo3->BackColor = System::Drawing::Color::Transparent;
-			this->Campo3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->Campo3->FlatAppearance->BorderSize = 0;
-			this->Campo3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->Campo3->Location = System::Drawing::Point(781, 230);
-			this->Campo3->Name = L"Campo3";
-			this->Campo3->Size = System::Drawing::Size(65, 90);
-			this->Campo3->TabIndex = 14;
-			this->Campo3->UseVisualStyleBackColor = false;
-			this->Campo3->Click += gcnew System::EventHandler(this, &Vprincipal::Campo3_Click);
-			// 
-			// Campo4
-			// 
-			this->Campo4->BackColor = System::Drawing::Color::Transparent;
-			this->Campo4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->Campo4->FlatAppearance->BorderSize = 0;
-			this->Campo4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->Campo4->Location = System::Drawing::Point(878, 230);
-			this->Campo4->Name = L"Campo4";
-			this->Campo4->Size = System::Drawing::Size(65, 90);
-			this->Campo4->TabIndex = 15;
-			this->Campo4->UseVisualStyleBackColor = false;
-			this->Campo4->Click += gcnew System::EventHandler(this, &Vprincipal::Campo4_Click);
-			// 
 			// lJugadorActual
 			// 
 			this->lJugadorActual->AutoSize = true;
@@ -307,9 +251,9 @@ namespace ED_ProyectoDracula {
 			this->bVer1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->bVer1->FlatAppearance->BorderSize = 0;
 			this->bVer1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->bVer1->Location = System::Drawing::Point(12, 141);
+			this->bVer1->Location = System::Drawing::Point(650, 21);
 			this->bVer1->Name = L"bVer1";
-			this->bVer1->Size = System::Drawing::Size(142, 57);
+			this->bVer1->Size = System::Drawing::Size(104, 42);
 			this->bVer1->TabIndex = 0;
 			this->bVer1->UseVisualStyleBackColor = false;
 			this->bVer1->Click += gcnew System::EventHandler(this, &Vprincipal::bVer1_Click);
@@ -362,10 +306,6 @@ namespace ED_ProyectoDracula {
 			this->Controls->Add(this->dir2);
 			this->Controls->Add(this->dir1);
 			this->Controls->Add(this->lJugadorActual);
-			this->Controls->Add(this->Campo4);
-			this->Controls->Add(this->Campo3);
-			this->Controls->Add(this->Campo2);
-			this->Controls->Add(this->Campo1);
 			this->Controls->Add(this->b9);
 			this->Controls->Add(this->b8);
 			this->Controls->Add(this->b7);
@@ -403,28 +343,7 @@ namespace ED_ProyectoDracula {
 			Deck^ mazo = Deck::Instance;
 			Tablero^ tJuego = Tablero::Instance;
 
-			int ronda = 1;
-			while (ronda <= 6) {
-				this->lRonda->Text = "Ronda " + ronda;
-				this->b5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(mazo->topCarta()->getDireccion())));
-				tJuego->repartir();
-				for (int x = 0; x < 8; x++) {
-					this->lJugadorActual->Text = "Jugador " + tJuego->getJActual();
-					if (tJuego->getJActual() == 1) {
-						this->Campo1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ1()[0]->getDireccion())));
-						this->Campo2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ1()[1]->getDireccion())));
-						this->Campo3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ1()[2]->getDireccion())));
-						this->Campo4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ1()[3]->getDireccion())));
-					}
-					else {
-						this->Campo1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ2()[0]->getDireccion())));
-						this->Campo2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ2()[1]->getDireccion())));
-						this->Campo3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ2()[2]->getDireccion())));
-						this->Campo4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ2()[3]->getDireccion())));
-					}
-				}
-				ronda++;
-			}
+			
 
 			Console::WriteLine(tJuego->getJActual());
 			Console::WriteLine(tJuego->getpDir1());
@@ -432,30 +351,7 @@ namespace ED_ProyectoDracula {
 
 		}
 
-		/*private: System::Void Vprincipal_Load2(System::Object^  sender, System::EventArgs^  e) {
 
-			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Vprincipal::typeid));
-			Deck^ mazo = Deck::Instance;
-			Tablero^ tJuego = Tablero::Instance;
-
-			if (tJuego->getJActual() == 1) {
-				this->Campo1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ1()[0]->getDireccion())));
-				this->Campo2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ1()[1]->getDireccion())));
-				this->Campo3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ1()[2]->getDireccion())));
-				this->Campo4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ1()[3]->getDireccion())));
-			}
-			else {
-				this->Campo1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ2()[0]->getDireccion())));
-				this->Campo2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ2()[1]->getDireccion())));
-				this->Campo3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ2()[2]->getDireccion())));
-				this->Campo4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(tJuego->getCartasJ2()[3]->getDireccion())));
-			}
-
-			Console::WriteLine(tJuego->getJActual());
-			Console::WriteLine(tJuego->getpDir1());
-			Console::WriteLine(tJuego->getpDir2());
-
-		}*/
 
 	private: System::Void Vprincipal_FormClosing(System::Object^  sender, System::Windows::Forms::FormClosingEventArgs^  e) {
 
@@ -477,57 +373,6 @@ namespace ED_ProyectoDracula {
 	private: System::Void b6_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
 
-	private: System::Void Campo1_Click(System::Object^  sender, System::EventArgs^  e) {
-		Tablero^ tJuego = Tablero::Instance;
-
-		if (tJuego->getJActual() == 1) {
-			tJuego->setCartaSeleccionada(tJuego->getCartasJ1()[0]);
-			tJuego->getCartasJ1()[0] = gcnew Carta("", "");
-		}
-		else {
-			tJuego->setCartaSeleccionada(tJuego->getCartasJ2()[0]);
-			tJuego->getCartasJ2()[0] = gcnew Carta("", "");
-		}
-
-		this->Show();
-	}
-
-	private: System::Void Campo2_Click(System::Object^  sender, System::EventArgs^  e) {
-		Tablero^ tJuego = Tablero::Instance;
-
-		if (tJuego->getJActual() == 1) {
-			tJuego->setCartaSeleccionada(tJuego->getCartasJ1()[1]);
-			tJuego->getCartasJ1()[1] = gcnew Carta("", "");
-		}
-		else {
-			tJuego->setCartaSeleccionada(tJuego->getCartasJ2()[1]);
-			tJuego->getCartasJ2()[1] = gcnew Carta("", "");
-		}
-	}
-	private: System::Void Campo3_Click(System::Object^  sender, System::EventArgs^  e) {
-		Tablero^ tJuego = Tablero::Instance;
-
-		if (tJuego->getJActual() == 1) {
-			tJuego->setCartaSeleccionada(tJuego->getCartasJ1()[2]);
-			tJuego->getCartasJ1()[2] = gcnew Carta("", "");
-		}
-		else {
-			tJuego->setCartaSeleccionada(tJuego->getCartasJ2()[2]);
-			tJuego->getCartasJ2()[2] = gcnew Carta("", "");
-		}
-	}
-	private: System::Void Campo4_Click(System::Object^  sender, System::EventArgs^  e) {
-		Tablero^ tJuego = Tablero::Instance;
-
-		if (tJuego->getJActual() == 1) {
-			tJuego->setCartaSeleccionada(tJuego->getCartasJ1()[3]);
-			tJuego->getCartasJ1()[3] = gcnew Carta("", "");
-		}
-		else {
-			tJuego->setCartaSeleccionada(tJuego->getCartasJ2()[3]);
-			tJuego->getCartasJ2()[3] = gcnew Carta("", "");
-		}
-}
 private: System::Void Vprincipal_Shown(System::Object^  sender, System::EventArgs^  e) {
 
 	System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Vprincipal::typeid));
@@ -541,6 +386,21 @@ private: System::Void Vprincipal_Shown(System::Object^  sender, System::EventArg
 	tJuego->getpDir1() == 0 ? this->dir1->Text = "Horizontal" : this->dir1->Text = "Vertical";
 	tJuego->getpDir2() == 0 ? this->dir2->Text = "Horizontal" : this->dir2->Text = "Vertical";
 	this->lJugadorActual->Text = "Jugador " + tJuego->getJActual();
+
+	int ronda = 1;
+	while (ronda <= 6) {
+		this->lRonda->Text = "Ronda " + ronda;
+		this->b5->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(mazo->topCarta()->getDireccion())));
+		tJuego->repartir();
+		for (int x = 0; x < 8; x++) {
+			this->lJugadorActual->Text = "Jugador " + tJuego->getJActual();
+
+			VCartasJugador^ vCJ = gcnew VCartasJugador(tJuego->getJActual());
+			vCJ->ShowDialog();
+			tJuego->getJActual() == 1 ? tJuego->setJActual(2) : tJuego->setJActual(1);
+		}
+		ronda++;
+	}
 
 }
 };
